@@ -1,0 +1,105 @@
+footer {
+    margin-top: 15rem;
+    background-color: $color-dark-2;
+
+}
+.footer {
+    padding: 10rem 0 5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    @include response(phone) {
+        padding: 50px 0 30px 0;
+
+    }
+    &-nav {
+        display: flex;
+        gap: 2.6rem;
+        
+        li a:hover {
+            color: $color-primary;
+        }
+    }
+
+    .contact {
+        display: flex;
+        gap: 20px;
+        padding: 5rem 0;
+        border-bottom: 1px solid $color-dark-3;
+        border-top: 1px solid $color-dark-3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        @include response(phone) {
+            gap: 30px;
+        }
+        &-item {
+            display: flex;
+            gap: 6px;
+            img {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+            p {
+                color: #E4E4E7;
+            }
+        }
+    }
+    .socical {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid $color-dark-3;
+        background-color: $color-dark-1;
+        border-radius: 10rem;
+        width: 100%;
+        padding: 1.6rem 3rem 1.6rem 1.6rem;
+        align-items: center;
+        @include response(phone) {
+            flex-direction: column;
+            margin-top: 22px;
+            border-radius: 12px;
+            :not(:first-child) {
+            
+                gap: 22px;
+            }
+        }
+        & > * {
+            width: fit-content;
+        }
+        &-item {
+            display: flex;
+            gap: 1.4rem;
+            
+            img {
+                width: 5.2rem;
+                height: 5.2rem;
+                @include response(phone) {
+                    transform: translateY(-72%);
+                    width: 44px;
+                    height: 44px;
+                }
+            }
+        }
+        p {
+            font-weight: 300;
+            color: $color-grey;
+        }
+        & p:hover {
+            cursor: pointer;
+            color: $color-primary;
+        }
+        & > div:last-child {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+            margin-top: 20px;
+            p:first-child {
+                padding-right: 1.2rem;
+                border-right: 1px solid $color-grey;
+            }
+            
+        }
+    }
+}

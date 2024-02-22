@@ -1,0 +1,128 @@
+
+.section__product {
+    display: flex;
+    flex-direction: column;
+    margin: 15rem auto;
+    gap: 10rem;
+    @include response (tablet-port) {
+        gap: 60px;
+        margin-top: 20rem;
+    }
+    .product-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: minmax(auto,30rem);
+
+        @include response(tablet-port) {
+            gap: 20px;
+            flex-direction: column;
+
+        }
+        .text-head {
+            display: flex;
+            flex-direction: column;
+            max-width: 57%;
+            @include response(tablet-port) {
+                max-width: none;
+            }
+            @include response(phone)  {
+                text-align: center;
+            }
+            p {
+                font-weight: normal;
+                color: $color-grey;
+            }
+        }
+    
+        .switch {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.4rem;
+            min-width: 38.6rem;
+            // max-height: 8.3rem;
+            align-items: end;
+            background-color: $color-dark-2;
+            outline: 1px solid $color-dark-3;
+            border-radius: 8.2rem;
+
+            &-active {
+                background-color: $color-primary;
+                color: $color-dark-2;
+            }
+
+            @include response(tablet-port) {
+                margin: 0 auto;
+            }
+        }
+    }
+    .product-bottom {
+        display: flex;
+        height: auto;
+        gap: 10rem;
+
+        position: relative;
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 100%;
+            border: 1px solid  $color-dark-3;
+            @include  response(phone) {
+                height: 0;
+                width: 100%;
+            }
+        }
+        &::before {
+            left: 32.2%;
+            @include  response(phone) {
+                top: 33%;
+                left: 0;
+                right: 0;
+            }
+        }
+        &::after {
+            left: 67.6%;
+            @include  response(phone) {
+                left: 0;
+                top: 67.6%;
+                right: 0;
+            }
+        }
+        @include  response(phone) {
+            flex-direction: column;
+
+        }
+        .product-card {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+
+            @include response(tablet-port) {
+                justify-content: flex-start;
+            }
+        
+            img {
+                display: inline-block;
+                text-align: center;
+                width:  9.8rem;
+                height:  9.8rem;
+                margin: 0 auto;
+            }
+        
+            h4 {
+                margin: 3rem 0 2rem 0;
+                font-size: 2.4rem;
+            }
+
+            p {
+                font-weight: 300;
+                color: $color-grey;
+            }
+
+        
+        }
+    }
+}

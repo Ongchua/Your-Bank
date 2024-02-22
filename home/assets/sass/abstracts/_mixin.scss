@@ -1,0 +1,26 @@
+@mixin cleafix {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@mixin response($breakpoint) { 
+
+
+    @if $breakpoint == laptop {
+        @media (max-width: 1620px) {@content}; 
+    }
+
+    @if $breakpoint == tablet-large {
+        @media (max-width: 1100px) {@content}; 
+    }
+
+    @if $breakpoint == tablet-port {
+        @media (max-width: 900px) {@content}; 
+    }
+
+    @if $breakpoint == phone {
+        @media (max-width: 600px) {@content};
+    }
+
+}

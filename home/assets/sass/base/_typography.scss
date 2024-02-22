@@ -1,0 +1,89 @@
+.text-link {
+    list-style: none;
+    text-decoration: none;
+    color: $color-white;
+}
+.normal-text {
+    font-size: $font-size-lage;
+    font-weight: 300;
+    color: $color-grey;
+    @include response(laptop) {
+        font-size: $font-size-medium;
+    }
+    @include response(phone) {
+        font-size: $font-size-small;
+    }
+}
+.head__section {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 150%;
+        color: $color-white;
+        
+        @include response(laptop) {
+            font-size: 38px;
+        }
+        @include response(phone) {
+            font-size: 28px;
+        }
+        span {
+            color: $color-primary;
+        } 
+
+}
+.head__section-text {
+
+        color: $color-grey;
+        font-size: $font-size-lage;
+        font-weight: 300;
+
+        @include  response(laptop) {
+            font-size: $font-size-medium         ;
+        }
+        @include response(phone) {
+            font-size: $font-size-small;
+        }
+}
+
+.text-head {
+    max-width: 80%;
+    @include response(tablet-port) {
+        max-width: 100%;
+    }
+        h3 {
+            font-size: 48px;
+            font-weight: 500;
+            color: $color-grey;
+            margin-bottom: 1.4rem;
+            @include response(laptop) {
+                font-size: 38px;
+            }
+         
+            @include response(phone) {
+                font-size: 28px;
+                text-align: center;
+            }
+            span {
+                color: $color-primary;
+            };
+            
+        }
+        
+    p {
+        font-weight: 300;
+        color: $color-grey;
+        line-height: 150%;
+        @include response(tablet-port) {
+            margin: 0 auto;
+        }
+                 
+        @include response(phone) {
+            text-align: center;
+        }
+        
+    }
+
+    
+
+
+}

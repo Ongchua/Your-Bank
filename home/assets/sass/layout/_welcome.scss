@@ -1,0 +1,324 @@
+
+.section__welcome{
+    display: flex;
+    padding-top: 10rem;
+    justify-content: space-between;
+
+    @include response(tablet-port) {
+        flex-direction: column;
+        padding: 0;
+        margin-top  : 50px;
+    }
+    
+    &-left {
+        max-width:  49%;
+
+        @include response(tablet-port) {
+           text-align: center;
+           max-width: 90%;
+           margin: 0  auto;
+        }
+        @include response(phone) {
+            max-width: 100%;
+        }
+        &-required {
+            display: inline-block;
+            padding: 1rem 2rem;
+
+            color: $color-white;
+            font-size: $font-size-lage;
+            font-weight: 300;
+            background-color: $color-dark-3;
+            border-radius: 6rem;
+
+            img {
+                vertical-align: middle;
+                
+                @include response(phone) {
+                   width: 20px;
+                   height: 20px;
+                }
+            }
+            span {
+                margin-left: .6rem;
+                vertical-align: middle;
+
+                @include response(phone) {
+                    font-size: 12px;
+                }
+            }
+        }
+         
+    }
+    &-head {
+        h2 {
+        margin: 2rem 0 1.4rem 0;
+        }        
+        .btn__account {
+            margin-top: 5rem;
+        }
+    }
+
+    .head__section-text {
+        color: $color-white;
+        line-height: 150%;
+    }
+
+
+    // RIGHT__CART
+    &-right {
+
+        @include response(phone) {
+            max-width: 100%;
+        }
+        .right__card {
+            position: relative;
+            width: 51.5rem;
+            height: auto;
+            padding: 3.468rem;
+            
+            border-radius: 10.404px;
+            border: 0.867px solid $color-dark-3;
+            background: linear-gradient(215deg, $color-dark-1 15%, $color-dark-1);
+            background-blend-mode: normal, screen, normal;
+            -webkit-background-blend-mode: normal, screen, normal;
+            
+            @include response(tablet-port) {
+                width: auto;
+                max-width: 400px;
+                margin: 80px auto  0 auto;
+                text-align: center;
+             }
+             @include response(phone){
+                max-width: 305px;
+            }
+
+            &-top {
+                margin-bottom: 2.6rem;
+                .card-top-heading {
+                    font-size: 1.734rem;
+                    font-weight: 500;
+                    margin-bottom: 1.7rem;
+                }
+                
+                .card-top-list {
+            
+                    .top-list-item {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .list-item-left {
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 1.3rem 2rem;
+                            outline: 1px solid $color-dark-3;
+                            background-color: $color-dark-2;
+                            border-radius: 1rem ;
+                            transition: all .3s;
+                            .item-left-text {
+                                display: flex;
+                                gap: .86rem;
+                                img {
+                                    width: 3.8rem;
+                                    height: 3.8rem;
+                                }
+                                .left-text p{
+                                    font-size: 1.5rem;
+                                    font-weight: 300;
+                    
+                                    &:last-child {
+                                        font-size: 1.7rem;
+                                        font-weight: 400;
+                                    }
+                                } 
+                            }
+                            .item-right-price {
+                                align-self: flex-end;
+                            }
+
+                            &:hover {
+                                outline: 1px solid $color-primary;
+                                overflow: hidden;
+                                cursor: pointer;
+                                z-index: 20;
+                                opacity: 1;
+                                width: 100%;
+                                transform: translateY(-4px);
+                            }
+                        }
+                        .item-1 {
+                            width: 100%;
+                            z-index: 10;              
+                        }
+                        .item-2 {
+                            width: 90%;
+                            margin-top: -2rem;
+                
+                            z-index: 9;
+                            opacity: .6;
+                
+                        }
+                        .item-3 {
+                            width: 80%;
+                  
+                            z-index: 8;
+                            opacity: .3;
+                            margin-top: -2rem;
+
+                        }
+                    }
+                }
+            }
+
+            &-bottom {
+                
+                .bottom-list-item {
+                    outline: 1px solid $color-dark-3;
+                    background-color: $color-dark-2;
+                    border-radius: 1rem ;
+                    
+                    display: flex;
+                    margin: 2.54rem 0;
+                    
+                    position: relative;
+                    &::after, &::before {
+                        content: "";
+                        position: absolute;
+                        border: 1px solid $color-dark-3;
+                    }
+                    &::after {
+                        width: 0;
+                        height: 100%;
+                        left:50%;
+                        top: 0;
+                    }
+                    &::before {
+                        width: 100%;
+                        height: 0;
+                        left:0;
+                        top: 55%;
+                    }
+
+                    .country {
+                        flex: 1;
+
+                        &-top {
+                            padding:1.74rem;
+                            img  {
+                                width: 3.5rem;
+                                height: 3.5rem;
+                            }
+                            div:not(:last-child) {
+                                margin-bottom: .85rem;
+                                img {
+                                vertical-align: middle;
+
+                                }
+                                span {
+                                vertical-align: middle;
+
+                                }
+                            }
+                            div:last-child {
+                                font-size:  1.4rem;
+                                font-weight: 300;
+                            }
+                        }
+                        &-bottom {
+                            padding: 2.6rem 1.74rem;
+                        }
+                    }
+            
+                }
+                
+            }
+            
+        // INC MONEY
+        .inc-money {
+            display: flex;
+            gap: 8px;
+            padding: 1.3rem 1.7rem;
+            border-radius: 1rem;
+            background-color: $color-dark-4;
+            
+            position: absolute;
+            top: -6%;
+            left: -12%;
+
+            img {
+                width: 3.8rem;
+                height: 3.8rem
+            };
+            div {
+                font-size: 1.7rem;
+                p {
+                    font-size: 1.3rem;
+                    color: $color-grey;
+                }
+            }
+        }
+               
+        }
+    
+    
+           
+        
+    }
+    .right__card-sups {
+        position: absolute;
+        right: 0;
+        display: flex;
+        margin-top: 40px;
+
+        padding: .87rem .87rem .87rem 2rem;
+        background-color: $color-dark-4;
+        border-radius: 7rem;
+        align-items: center;
+        justify-content: space-between;
+        max-width: max-content;
+        gap: 1rem;
+
+
+
+        p {
+            font-size: 1.5rem;
+            vertical-align: middle;
+        }
+        div {
+            background-color: $color-dark-1;
+            padding: .87rem ;
+            border-radius: 7rem;
+            display: flex;
+            align-items: center;
+            gap: .7rem;
+            
+
+            svg {
+                width: 3.6rem;
+                height: 3.6rem;
+                background-color: $color-dark-1;
+                vertical-align: middle;
+                cursor: pointer;
+                transition: all .2s;
+                
+                &:active {
+                    transform: scale(.9);
+                }
+
+                &:hover>path:first-child {
+                    fill: $color-primary;
+                }
+                &:hover>path:not(:first-child) {
+                    fill: $color-dark-1;
+                }
+                &:last-child:hover g > * {
+                    fill: $color-dark-1;
+                }
+
+            }
+           
+        }
+    }
+   
+
+}

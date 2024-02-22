@@ -1,0 +1,125 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:500;
+    display: none;
+    &-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(190, 187, 187, 0.2);
+    }
+    &-body {
+        width: 60rem;
+        padding: 50px 20px  ;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #aad1d9;
+        z-index: 1;
+        border-radius: 16px;
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            h3 {
+                font-size: 50px;
+                text-align: center;
+                color: red;
+            }
+            label, p {
+                color: black;
+            }
+            &-item {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+              
+                input {
+                    height: 40px;
+                    padding: 10px;
+                    border-radius: 6px;
+                    border: none;
+                    &:focus {
+                        border: none;
+                        outline-width: 0;
+                    }
+                }
+              
+            }
+            p span {
+                font-weight: 600;
+                color: red;
+                cursor: pointer;
+                text-decoration: underline;
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+            .btn {
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
+                background-color: #757373;
+                padding: 14px 30px;
+                &:hover {
+                    color: $color-dark-2;
+                    background-color: $color-primary;
+                }
+            }
+            .check-box {
+                display: flex;
+                gap: 8px;
+                font-size: 14px;
+                * {
+                cursor: pointer;
+                }
+                input[type=checkbox] {
+                    display: none;
+                }
+                label {
+                    padding-left: 30px;
+                    position: relative;
+                    margin: 0;
+                    line-height: 20px;
+                }
+                label:before {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    content: '';
+                    background-color: $color-white;
+                    border: 1px solid $color-dark-1;
+                }
+                input[type=checkbox]:checked ~ label:after {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background-color: red;
+                    position: absolute;
+                    top: 50%;
+                    left: 4px;
+                    transform: translateY(-50%);
+                    content: '';
+
+                }
+            }
+        }
+    }
+}
+
+.form-login, .form-sign {
+    display: none;
+    
+}
+.form-active{
+    display: block;
+    animation:showForm .3s;
+
+}

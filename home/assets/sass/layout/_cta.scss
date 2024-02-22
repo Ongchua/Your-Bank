@@ -1,0 +1,41 @@
+.section__cta {
+    margin-top: 15rem;
+    padding: 8rem;
+    border-radius:  2rem;
+    background-color: $color-dark-2;
+    background-blend-mode: normal, screen, normal;
+    border: 1px solid $color-dark-3;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15rem;
+    
+    @include response(phone) {
+        flex-direction: column;
+        gap: 24px;
+    }
+    &>.text-head {
+        h3 {
+            font-size: 4rem;
+            margin-bottom: 14px;
+        }
+    }
+    .btn__account {
+        width: 15%;
+        @include response(phone) {
+            width: fit-content;
+        }
+    }
+    .img-cta {
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+            width: 29.8rem;
+            height: 29.3rem;
+        }
+    }
+    
+}

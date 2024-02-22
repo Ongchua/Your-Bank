@@ -1,0 +1,14 @@
+{
+  "name": "yourbank",
+  "version": "1.0.0",
+  "description": "Your-Bank",
+  "main": "index.js",
+  "scripts": {
+    "home:sass": "node-sass home/assets/sass/home.scss home/assets/css/home.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

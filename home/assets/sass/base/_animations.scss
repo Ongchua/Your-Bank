@@ -1,0 +1,23 @@
+
+@keyframes showFeatures {
+    0% {
+        opacity: 0.4;
+
+        transform: translateX(20%);
+    }
+    
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+   
+    }
+}
+
+@keyframes showForm {
+    0% {
+        height: 20%;
+    }
+    100% {
+        height: 100%;
+    }
+}
